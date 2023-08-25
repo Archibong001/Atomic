@@ -11,7 +11,7 @@ export default function Card(props) {
         <p>{props.description}</p>
 
         <div className='bulb'>
-        <img src="public/Images/bulb.jpg" alt="" />
+        <img src="/Images/bulb.jpg" alt="" />
         </div>
         
       </div>
@@ -24,7 +24,7 @@ export default function Card(props) {
         <p>{props.description}</p>
 
         <div className='carrot'>
-        <img src="public/Images/carrot.jpg" alt="" />
+        <img src="/Images/carrot.jpg" alt="" />
         </div>
         
       </div>
@@ -38,7 +38,7 @@ export default function Card(props) {
         <p>{props.description}</p>
 
         <div className='infinity'>
-        <img src="public/Images/infinity.jpg" alt="" />
+        <img src="/Images/infinity.jpg" alt="" />
         </div>
         
       </div>

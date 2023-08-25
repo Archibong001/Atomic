@@ -26,13 +26,13 @@
 import React, { useState, useEffect } from 'react';
 
 export default function Header() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Update isMobile state on window resize
   useEffect(() => {
     function handleResize() {
-      setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
+      setIsMobile(window.width <= 768); // Adjust breakpoint as needed
     }
     handleResize(); // Call initially
     window.addEventListener('resize', handleResize);
@@ -50,12 +50,12 @@ export default function Header() {
       <div className="logo">
         <span>ATOMIC</span>
       </div>
-      {isMobile ? (
+     
         <button className="nav-button" onClick={toggleMenu}>
           Menu
         </button>
-      ) : (
-        <ul className="navbar-list">
+     
+        <ul className="navbar-list" id='nav1'>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
@@ -65,9 +65,9 @@ export default function Header() {
           <li><button className="nav-button">Login</button></li>
           <li><button className="nav-button">SignUp</button></li>
         </ul>
-      )}
-      {isMobile && isMenuOpen && (
-        <ul className="navbar-list">
+     
+      { isMenuOpen && (
+        <ul className="navbar-list" id='nav2'>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
